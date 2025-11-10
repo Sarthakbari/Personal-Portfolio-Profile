@@ -1,13 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal-Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div class="left">Sarthak Bari</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is
+                <span class="purple">Sarthak Bari</span>
+                <div>and I'm a passionate</div>
+                <span id="element"></span>
+                <div class="button">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn"> Visit GitHub</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="pg.PNG" alt="Img">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What i have done so far.</span>
+            <h1>Project Experience</h1>
+            <div class="box">
+                <div class="project-box">
+                    <a href="/">Resume-Builder-Project</a>
+                    <span>
+                        Developed a web-based tool that enables students and professionals to create personalized,
+                        professional-looking resumes in minutes. Users can select from multiple templates, input their
+                        information, and instantly download a print-ready PDF. Designed with a clean UI and streamlined
+                        user experience to make resume creation accessible to everyone.
+                    </span>
+                </div>
+                <div class="project-box">
+                    <a href="/">Password Generator</a>
+                    <span>
+                        Developed a Secure Password Generator web application using HTML, CSS, and JavaScript that
+                        creates strong and customizable passwords instantly. The tool allows users to choose password
+                        length and include options like uppercase letters, lowercase letters, numbers, and special
+                        symbols. Designed with a simple and responsive UI, ensuring both ease of use and security
+                        awareness.
+                    </span>
+                </div>
+                <div class="project-box">
+                    <h4><a href="/">Ghost Animations</a></h4>
+                    <span>
+                        Created a fun and visually engaging Ghost Animation using HTML and CSS to demonstrate creativity
+                        in front-end design and animation. The project features a smooth, floating ghost effect with
+                        glowing eyes and a shadow, built entirely with pure CSS keyframes and positioning techniques—no
+                        JavaScript used. Designed for responsive display and optimized for performance across devices.
+                    </span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="Contact">
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:barisarthak2005@gmail.com">barisarthak2005@gmail.com</a></p>
+        <p>LinkedIn: <a href="linkedin.com/in/sarthak-bari-237504305" target="_blank">linkedin.com/in/sarthakbari</a>
+        </p>
+        <p>GitHub: <a href="https://github.com/sarthakbari" target="_blank">github.com/sarthakbari</a></p>
+        <p>© 2025 Sarthak Bari | Personal Portfolio Project</p>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer'],
+            typeSpeed: 50,
+            // Add this line to enable infinite looping
+            loop: true,
+            // You can also add options for backspacing like backSpeed and backDelay
+            backSpeed: 30, // Speed of deleting text
+            backDelay: 1500 // Delay before starting to delete
+        });
+    </script>
+
+
     <script src="script.js"></script>
 </body>
+
 </html>
