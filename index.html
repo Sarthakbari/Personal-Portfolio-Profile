@@ -2,95 +2,115 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal-Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarthak Bari | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <canvas id="stars"></canvas>
+
     <header>
         <nav>
             <div class="left">Sarthak Bari</div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
-                </ul>
-            </div>
+            <div class="clock" id="clock"></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#fact">Fun Fact</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
         <section class="firstSection">
             <div class="leftSection">
-                Hi, My name is
+                Hi, My Name is 
                 <span class="purple">Sarthak Bari</span>
-                <div>and I'm a passionate</div>
-                <span id="element"></span>
-                <div class="button">
-                    <button class="btn">Download Resume</button>
-                    <button class="btn"> Visit GitHub</button>
+                <div>and I'm a</div>
+                <span class="purple" id="element"></span>
+
+                <!-- DOWNLOAD: use an anchor with download. URL-encode spaces in filename. -->
+                <!-- Place "Sarthak Bari Resume.pdf" in same folder as this HTML (or change href to your path). -->
+                <div style="margin-top:18px;">
+                    <a class="btn" href="Sarthak%20Bari%20Resume.pdf" download="Sarthak Bari Resume.pdf">Download
+                        Resume</a>
+
+                    <!-- fallback: open in new tab if browser ignores download attribute -->
+                    <!-- <a class="btn" href="Sarthak%20Bari%20Resume.pdf" target="_blank" rel="noopener">Open Resume</a> -->
+
+                    <a class="btn" href="https://github.com/sarthakbari" target="_blank" rel="noopener">Visit GitHub</a>
                 </div>
             </div>
+
             <div class="rightSection">
-                <img src="pg.PNG" alt="Img">
+                <img src="pg.PNG" alt="Profile Image">
             </div>
         </section>
         <hr>
-        <section class="secondSection">
+        <!-- Projects -->
+        <section class="secondSection" id="projects">
             <span class="text-gray">What i have done so far.</span>
             <h1>Project Experience</h1>
-            <div class="box">
-                <div class="project-box" id="resumeProject">
-                    <a href="https://resume-builder-project-ten.vercel.app" target="_blank" style="text-decoration:none; color:inherit;">
-                        <a href="/">Resume-Builder-Project</a>
-                        <span>
-                            Developed a web-based tool that enables students and professionals to create personalized,
-                            professional-looking resumes in minutes. Users can select from multiple templates, input their
-                            information, and instantly download a print-ready PDF. Designed with a clean UI and streamlined
-                            user experience to make resume creation accessible to everyone.
-                        </span>
-                    </a>
+            <div class="project-box" onclick="window.open('https://resume-builder-project-ten.vercel.app','_blank')">
+                <h3>Resume Builder</h3>
+                <p>Web app to create professional resumes with templates and instant PDF download.</p>
+            </div>
+            <div class="project-box" onclick="window.open('https://profile-tawny-pi-60.vercel.app','_blank')">
+                <h3>Personal Portfolio Website</h3>
+                <p>Portfolio showcasing my skills, projects, and achievements with responsive design.</p>
+            </div>
+            <div class="project-box" onclick="window.open('https://codepen.io/Sarthak-Bari/pen/JjQyvvK','_blank')">
+                <h3>Ghost Animation</h3>
+                <p>CSS animation demonstrating creativity and smooth design.</p>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <!-- <section id="stats">
+            <h1 style="text-align:center;">My Project Stats</h1>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="3">0</div>
+                    <div class="stat-title">Projects Completed</div>
                 </div>
-                <div class="project-box" id="">
-                    <a href="/">Password Generator</a>
-                    <span>
-                        Developed a Secure Password Generator web application using HTML, CSS, and JavaScript that
-                        creates strong and customizable passwords instantly. The tool allows users to choose password
-                        length and include options like uppercase letters, lowercase letters, numbers, and special
-                        symbols. Designed with a simple and responsive UI, ensuring both ease of use and security
-                        awareness.
-                    </span>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="2500">0</div>
+                    <div class="stat-title">Lines of Code</div>
                 </div>
-                <div class="project-box" id="ghost-animations">
-                    <a href="https://codepen.io/megh-bari/full/MWdNZdB" target="_blank" style="text-decoration:none; color:inherit;">
-                    <a href="/">Ghost Animations</a>
-                    <span>
-                        Created a fun and visually engaging Ghost Animation using HTML and CSS to demonstrate creativity
-                        in front-end design and animation. The project features a smooth, floating ghost effect with
-                        glowing eyes and a shadow, built entirely with pure CSS keyframes and positioning techniques—no
-                        JavaScript used. Designed for responsive display and optimized for performance across devices.
-                    </span>
-                 </a>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-title">Tools Used</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="2">0</div>
+                    <div class="stat-title">Years of Experience (Learning)</div>
                 </div>
             </div>
+        </section> -->
+
+        <!-- Fun Fact Section -->
+        <section id="fact" class="fact-box">
+            <h2>Click for a Developer Fun Fact 💡</h2>
+            <p id="factText">Tap to reveal something cool!</p>
         </section>
     </main>
 
     <footer id="Contact">
         <h3>Contact Me</h3>
         <p>Email: <a href="mailto:barisarthak2005@gmail.com">barisarthak2005@gmail.com</a></p>
-        <p>LinkedIn: <a href="linkedin.com/in/sarthak-bari-237504305" target="_blank">linkedin.com/in/sarthakbari</a>
-        </p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/sarthak-bari-237504305"
+                target="_blank">linkedin.com/in/sarthakbari</a></p>
         <p>GitHub: <a href="https://github.com/sarthakbari" target="_blank">github.com/sarthakbari</a></p>
-        <p>© 2025 Sarthak Bari | Personal Portfolio Project</p>
+        <p>© 2025 Sarthak Bari | Portfolio Project</p>
     </footer>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+    <button id="scrollTopBtn">↑</button>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
             strings: ['Web Developer'],
@@ -102,8 +122,6 @@
             backDelay: 1500 // Delay before starting to delete
         });
     </script>
-
-
     <script src="script.js"></script>
 </body>
 
